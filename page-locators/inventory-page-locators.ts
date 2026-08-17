@@ -13,4 +13,5 @@ export const inventoryPageLocators = {
     filterDropDown: "select.product_sort_container",
     applicationLogo: "div.app_logo",
     shoppingCartLink: "a.shopping_cart_link",
+
 }
