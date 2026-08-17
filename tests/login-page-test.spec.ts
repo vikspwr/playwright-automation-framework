@@ -18,6 +18,7 @@ test.describe("Login Page Testing", () => {
 
         await test.step("Perform Login", async () => {
             inventoryPage = await loginPage.loginToSauceDemo("standard_user", "secret_sauce");
+            await expect(page).toHaveURL(/inventory.html/)
         })
 
     });
