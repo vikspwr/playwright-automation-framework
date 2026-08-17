@@ -1,4 +1,5 @@
 
+// Checkout Page Locators
 export const checkoutPageLocators = {
 
     firstNameInput: "input#first-name",

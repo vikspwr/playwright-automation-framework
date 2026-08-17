@@ -1,4 +1,5 @@
 
+// About Page Locators
 export const aboutPageLocators = {
 
     bookDemoButton: { selector: "span", options: { hasText: "Book a Demo" } },

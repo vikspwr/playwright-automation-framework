@@ -1,5 +1,5 @@
 
-
+// Inventory Page Locators
 export const inventoryPageLocators = {
 
     menuButton: "button[type = 'button'][id = 'react-burger-menu-btn']",

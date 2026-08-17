@@ -1,4 +1,5 @@
 
+// Order Summary Page Locators
 export const orderSummaryPageLocators = {
 
     finishButton: "button#finish",

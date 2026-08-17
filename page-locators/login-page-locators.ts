@@ -1,4 +1,5 @@
 
+// Login Page Locators
 export const loginPageLocators = {
 
     usernameInput: "#user-name",

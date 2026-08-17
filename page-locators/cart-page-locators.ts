@@ -1,4 +1,5 @@
 
+// Cart Page Locators
 export const cartPageLocators = {
 
     checkoutButton: "button#checkout",

@@ -1,4 +1,5 @@
 
+// Order Confirmation Page Locators
 export const orderConfirmationPageLocators = {
 
     orderConfirmationMessage: { selector: "h2", options: { hasText: /Thank you for your order/ } },
