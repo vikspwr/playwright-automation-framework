@@ -16,21 +16,27 @@ test.describe("Login Page Testing", () => {
 
     test("Login Functionality", async ({ page }) => {
 
-        inventoryPage = await loginPage.loginToSauceDemo("standard_user", "secret_sauce");
+        await test.step("Perform Login", async () => {
+            inventoryPage = await loginPage.loginToSauceDemo("standard_user", "secret_sauce");
+        })
 
     });
 
     test("Validate text on Login Page", async ({ page }) => {
-        const textOnLoginPage = await loginPage.textOnLoginPage();
-        expect(textOnLoginPage).toBe("Swag Labs");
+        await test.step("Assertion - Text on Login Page", async () => {
+            const textOnLoginPage = await loginPage.textOnLoginPage();
+            expect(textOnLoginPage).toBe("Swag Labs");
+        })
+
     });
 
     test("Validate Login Page URL", async ({ page }) => {
 
-        const loginPageURL = loginPage.urlOfloginPage();
-        await expect(page).toHaveURL(loginPageURL);
+        await test.step("Assertion - Login Page URL", async ({ }) => {
+            const loginPageURL = loginPage.urlOfloginPage();
+            await expect(page).toHaveURL(loginPageURL);
+        })
 
     });
-
 
 })
