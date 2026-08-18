@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test'
 import { LoginPage } from '../pages/login-page'
 import { navigateToSauceDemo } from '../utils/helper'
 import { InventoryPage } from '../pages/inventory-page';
+import 'dotenv/config';
 
 test.describe("Login Page Testing", () => {
 
@@ -14,10 +15,11 @@ test.describe("Login Page Testing", () => {
 
     });
 
-    test("Login Functionality", async ({ page }) => {
+    test("Validate Login Functionality", async ({ page }) => {
 
         await test.step("Perform Login", async () => {
-            inventoryPage = await loginPage.loginToSauceDemo("standard_user", "secret_sauce");
+
+            inventoryPage = await loginPage.loginToSauceDemo(process.env.LOGIN_USERNAME!, process.env.LOGIN_PASSWORD!);
             await expect(page).toHaveURL(/inventory.html/)
         })
 
